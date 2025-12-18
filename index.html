@@ -511,7 +511,7 @@
         function launchConfetti() {
             var duration = 3 * 1000;
             var animationEnd = Date.now() + duration;
-            var defaults = { startVelocity: 30, spread: 200, ticks: 60, zIndex: 0 };
+            var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
             var random = Math.random;
 
@@ -522,7 +522,7 @@
                 return;
             }
 
-            var particleCount = 50 * (timeLeft / duration);
+            var particleCount = 20 * (timeLeft / duration);
             confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomRange(0.1, 0.3), y: Math.random() - 0.2 } }));
             confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomRange(0.7, 0.9), y: Math.random() - 0.2 } }));
 
